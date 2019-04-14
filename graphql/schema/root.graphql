@@ -13,7 +13,15 @@ type Person {
 
 type Query {
     allEvents: [Event]
-    event(id: ID): Event,
+    event(id: ID): Event
+    allPeople: [Person]
+    person(id: ID!): Person
+}
+
+input EventInput {
+    title: String
+    where: String
+    url: String
 }
 
 input EventInput {
